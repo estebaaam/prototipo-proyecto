@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario - Panel de Control</title>
+    <link rel="stylesheet" href="/prototipo-proyecto-main/css/gestorInventario.css">
+</head>
+<body>
+    <div class="inventory-manager">
+        <header>
+            <h1>Gestor de Inventario</h1>
+            <div class="header-actions">
+                <button class="add-product">Agregar Producto</button>
+                <input type="text" class="search-bar" placeholder="Buscar producto...">
+                <button class="search-btn">Buscar</button>
+            </div>
+        </header>
+
+        <!-- Navegación de Filtros -->
+        <nav class="filter-nav">
+            <ul>
+                <li><button class="filter-btn" data-filter="bajo-stock">Productos Bajo Stock</button></li>
+                <li><button class="filter-btn" data-filter="agotados">Productos Agotados</button></li>
+                <li><button class="filter-btn" data-filter="mas-vendidos">Productos Más Vendidos</button></li>
+                <li><button class="filter-btn" data-filter="todos-movimientos">Todos los Movimientos</button></li>
+            </ul>
+        </nav>
+
+        <!-- Tabla de Gestión de Productos -->
+        <section class="inventory-table">
+            <h2>Listado de Productos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Proveedor</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Televisión 4K</td>
+                        <td>Electrónica</td>
+                        <td>$500</td>
+                        <td>Proveedor A</td>
+                        <td>30</td>
+                        <td>Disponible</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Laptop Dell</td>
+                        <td>Computadoras</td>
+                        <td>$800</td>
+                        <td>Proveedor B</td>
+                        <td>15</td>
+                        <td>Disponible</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>Mouse Inalámbrico</td>
+                        <td>Accesorios</td>
+                        <td>$30</td>
+                        <td>Proveedor C</td>
+                        <td>0</td>
+                        <td>Agotado</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas aquí -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Generación de Reportes -->
+        <section class="report-generator">
+            <h2>Generar Reportes de Inventario</h2>
+            <button class="generate-report">Generar Reporte</button>
+            <div class="report-options">
+                <label for="report-type">Tipo de Reporte:</label>
+                <select id="report-type">
+                    <option value="diario">Diario</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <label for="format">Formato:</label>
+                <select id="format">
+                    <option value="pdf">PDF</option>
+                </select>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Funcionalidad para los filtros
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterType = button.dataset.filter;
+                // Aquí puedes agregar la lógica para filtrar la tabla según el filtro seleccionado
+                console.log(`Filtrando por: ${filterType}`);
+            });
+        });
+
+        // Funcionalidad para buscar productos
+        document.querySelector('.search-btn').addEventListener('click', () => {
+            const searchQuery = document.querySelector('.search-bar').value;
+            // Aquí puedes agregar la lógica para buscar el producto en la tabla
+            console.log(`Buscando: ${searchQuery}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pedidos</title>
+    <link rel="stylesheet" href="/prototipo-proyecto-main/css/gestorPedido.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Nombre de la Empresa</h1>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <img src="assets/img/avatar.png" alt="Avatar" class="avatar">
+                <span class="user-role">Administrador</span>
+                <a href="#" class="logout">Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <header>
+            <h1>Gestor de Pedidos</h1>
+            <input type="text" placeholder="Buscar pedido..." class="search-bar">
+            <button class="btn-create">Crear Nuevo Pedido</button>
+        </header>
+
+        <section class="order-review">
+            <h2>Lista de Pedidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID de Pedido</th>
+                        <th>Cliente</th>
+                        <th>Productos Comprados</th>
+                        <th>Precio Total</th>
+                        <th>Estado del Pedido</th>
+                        <th>Fecha de Creación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Juan Pérez</td>
+                        <td>2</td>
+                        <td>$200.00</td>
+                        <td>
+                            <select>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="enviado">Enviado</option>
+                                <option value="entregado">Entregado</option>
+                                <option value="cancelado">Cancelado</option>
+                            </select>
+                        </td>
+                        <td>2024-09-25</td>
+                        <td>
+                            <button class="btn-details" onclick="openModal()">Ver Detalles</button>
+                            <button class="btn-edit">Editar</button>
+                            <button class="btn-cancel">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Modal para ver detalles del pedido -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Detalles del Pedido</h2>
+                <div class="client-info">
+                    <h3>Información del Cliente</h3>
+                    <p><strong>Nombre:</strong> Juan Pérez</p>
+                    <p><strong>Dirección de envío:</strong> Calle Falsa 123</p>
+                    <p><strong>Correo electrónico:</strong> juanperez@example.com</p>
+                    <p><strong>Número de contacto:</strong> 123-456-7890</p>
+                </div>
+                <div class="product-details">
+                    <h3>Detalles de Productos</h3>
+                    <ul>
+                        <li>
+                            <img src="path/to/image.jpg" alt="Producto 1">
+                            <p>Producto 1 - $100.00</p>
+                            <p>Cantidad: 1</p>
+                        </li>
+                        <li>
+                            <img src="path/to/image.jpg" alt="Producto 2">
+                            <p>Producto 2 - $100.00</p>
+                            <p>Cantidad: 1</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment-info">
+                    <h3>Método de Pago</h3>
+                    <p>Tarjeta de Crédito - Estado: Pagado</p>
+                </div>
+                <div class="notes">
+                    <h3>Notas o Comentarios</h3>
+                    <p>No hay notas adicionales.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Generación de Reportes -->
+        <section class="report-generator">
+            <h2>Generar Reportes de Inventario</h2>
+            <button class="generate-report">Generar Reporte</button>
+            <div class="report-options">
+                <label for="report-type">Tipo de Reporte:</label>
+                <select id="report-type">
+                    <option value="diario">Diario</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <label for="format">Formato:</label>
+                <select id="format">
+                    <option value="pdf">PDF</option>
+                    <option value="csv">CSV</option>
+                </select>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Funciones para abrir y cerrar el modal
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // Cierra el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
