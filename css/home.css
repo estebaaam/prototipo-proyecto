@@ -52,11 +52,20 @@ header {
 
 
 main {
-  width: 600px;
   background-color: white;
   margin-left: 50px;
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.text {
+  width: 700px;
+}
+
+.imagen-home {
+  height: 400px;
+  margin-right: 100px;
 }
 
 main h2 {

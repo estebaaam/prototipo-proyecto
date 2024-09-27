@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Contabilidad</title>
+    <link rel="stylesheet" href="../css/gestor_Contabilidad.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Contabilidad</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#ventas">Ventas</a></li>
+                <li><a href="#compras">Compras</a></li>
+                <li><a href="#pagos">Pagos a Proveedores</a></li>
+                <li><a href="#balance">Balance General</a></li>
+                <li><a href="#reportes">Generar Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="ventas" class="section-contabilidad">
+        <h2>Registro de Ventas</h2>
+        <div class="ventas-actions">
+            <button class="add-venta">Registrar Nueva Venta</button>
+            <input type="text" class="search-bar" placeholder="Buscar venta por ID o fecha...">
+        </div>
+        <table class="ventas-table">
+            <thead>
+                <tr>
+                    <th>ID Venta</th>
+                    <th>Cliente</th>
+                    <th>Producto</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="compras" class="section-contabilidad">
+        <h2>Registro de Compras</h2>
+        <div class="compras-actions">
+            <button class="add-compra">Registrar Nueva Compra</button>
+            <input type="text" class="search-bar" placeholder="Buscar compra por ID o fecha...">
+        </div>
+        <table class="compras-table">
+            <thead>
+                <tr>
+                    <th>ID Compra</th>
+                    <th>Proveedor</th>
+                    <th>Producto</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="pagos" class="section-contabilidad">
+        <h2>Pagos a Proveedores</h2>
+        <div class="pagos-actions">
+            <button class="add-pago">Registrar Nuevo Pago</button>
+            <input type="text" class="search-bar" placeholder="Buscar pago por ID o proveedor...">
+        </div>
+        <table class="pagos-table">
+            <thead>
+                <tr>
+                    <th>ID Pago</th>
+                    <th>Proveedor</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+    <section id="balance" class="section-contabilidad">
+        <h2>Balance General</h2>
+        <div class="balance-summary">
+            <div class="summary-card">
+                <h3>Total Ventas</h3>
+                <p></p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Compras</h3>
+                <p></p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Pagos a Proveedores</h3>
+                <p></p>
+            </div>
+            <div class="summary-card">
+                <h3>Ganancia Neta</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reportes" class="section-contabilidad">
+        <h2>Generar Reportes</h2>
+        <button class="generate-report">Generar Reporte</button>
+        <div class="report-options">
+            <label for="report-type">Tipo de Reporte:</label>
+            <select id="report-type">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+            <label for="format">Formato:</label>
+            <select id="format">
+                <option value="pdf">PDF</option>
+                <option value="csv">CSV</option>
+            </select>
+        </div>
+    </section>
+
+    <footer>
+        <p>Gestor de Contabilidad - Powered by TechShop © 2024</p>
+    </footer>
+</body>
+</html>

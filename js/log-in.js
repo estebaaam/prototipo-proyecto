@@ -14,11 +14,11 @@
               if (user) {
                   
                   if (user.tipo === 'admin') {
-                      window.location.href = "../html/TiendaAdmin.html";  
+                      window.location.href = "../html/dashboard.html";
                   }
                   
                   else if (user.tipo === 'usuario') {
-                      window.location.href = "../html/tienda.html";  
+                      window.location.href = "../html/tienda.html";   
                   }
               } else {
                   

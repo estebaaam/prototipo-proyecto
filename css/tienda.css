@@ -28,6 +28,8 @@ header {
   font-size: 18px;
   font-weight: 500;
   margin-right: 16px;
+  margin-left: 3px;
+  cursor: pointer;
 }
 .left-section p {
   color: white;
@@ -71,6 +73,29 @@ header {
 .icon-search {
   height: 25px;
   margin-top: 4px;
+}
+
+.right-most-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-role {
+  margin-right: 20px;
+  font-weight: bold;
+  color: white;
 }
 
 main {

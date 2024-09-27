@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section p {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-section button {
+  background-color: black;
+  border-color: black;
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 16px;
+  margin-left: 3px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-role {
+  margin-right: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.left-column {
+  flex: 2;
+  padding-right: 40px;
+}
+
+.shipping-section, .payment-method, .shipping-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.shipping-section h2, .payment-method h2, .shipping-info h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.autocomplete-btn, .confirm-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.autocomplete-btn {
+  margin-bottom: 20px;
+}
+
+.shipping-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  width: 100%;
+}
+
+.right-column {
+  flex: 1;
+  height: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.summary-box p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}

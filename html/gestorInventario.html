@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario - Panel de Control</title>
+    <link rel="stylesheet" href="../css/gestorInventario.css">
+</head>
+<body>
+    <div class="inventory-manager">
+        <header>
+            <h1>Gestor de Inventario</h1>
+            <div class="header-actions">
+                <button class="add-product">Agregar Producto</button>
+                <input type="text" class="search-bar" placeholder="Buscar producto...">
+                <button class="search-btn">Buscar</button>
+            </div>
+        </header>
+
+        <nav class="filter-nav">
+            <ul>
+                <li><button class="filter-btn" data-filter="bajo-stock">Productos Bajo Stock</button></li>
+                <li><button class="filter-btn" data-filter="agotados">Productos Agotados</button></li>
+                <li><button class="filter-btn" data-filter="mas-vendidos">Productos Más Vendidos</button></li>
+                <li><button class="filter-btn" data-filter="todos-movimientos">Todos los Movimientos</button></li>
+            </ul>
+        </nav>
+
+        <section class="inventory-table">
+            <h2>Listado de Productos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Proveedor</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="report-generator">
+            <h2>Generar Reportes de Inventario</h2>
+            <button class="generate-report">Generar Reporte</button>
+            <div class="report-options">
+                <label for="report-type">Tipo de Reporte:</label>
+                <select id="report-type">
+                    <option value="diario">Diario</option>
+                    <option value="semanal">Semanal</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <label for="format">Formato:</label>
+                <select id="format">
+                    <option value="pdf">PDF</option>
+                </select>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

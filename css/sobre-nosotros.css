@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  border-color: black;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.20s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn:active {
+  opacity: 0.3;
+}
+
+.about-us, .mision-vision, .services {
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+.about-us h2, .mision-vision h2, .services h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.about-us p, .mision-vision p, .services p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.ubication {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+  align-items: center;
+}
+
+.video, .map {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12);
+  padding: 20px;  
+}
+
+.video h2, .map h2 {
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+}
