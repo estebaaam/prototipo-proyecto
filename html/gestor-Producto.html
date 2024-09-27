@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Productos - Panel de Control</title>
+    <link rel="stylesheet" href="/css/gestor-Producto.css">
+</head>
+<body>
+    <div class="product-manager">
+        <header>
+            <h1>Gestor de Productos</h1>
+            <div class="header-actions">
+                <button class="add-product">Agregar Producto</button>
+                <button class="export-report">Generar Reporte</button>
+                <input type="text" class="search-bar" placeholder="Buscar producto o SKU...">
+                <button class="search-btn">Buscar</button>
+            </div>
+        </header>
+
+        <!-- Panel de Resumen -->
+        <div class="product-summary">
+            <div class="summary-card">
+                <h3>Total Productos</h3>
+                <p id="total-products">100</p>
+            </div>
+            <div class="summary-card">
+                <h3>Productos Ocultos</h3>
+                <p id="hidden-products">20</p>
+            </div>
+            <div class="summary-card">
+                <h3>Productos con Bajo Stock</h3>
+                <p id="low-stock-products">10</p>
+            </div>
+            <div class="summary-card">
+                <h3>Productos Agotados</h3>
+                <p id="out-of-stock-products">5</p>
+            </div>
+        </div>
+
+        <!-- Navegación de Filtros -->
+        <nav class="filter-nav">
+            <ul>
+                <li><button class="filter-btn" data-filter="bajo-stock">Productos Bajo Stock</button></li>
+                <li><button class="filter-btn" data-filter="agotados">Productos Agotados</button></li>
+                <li><button class="filter-btn" data-filter="ocultos">Productos Ocultos</button></li>
+                <li><button class="filter-btn" data-filter="todos">Todos los Productos</button></li>
+            </ul>
+        </nav>
+
+        <!-- Tabla de Productos -->
+        <section class="product-table">
+            <h2>Listado de Productos</h2>
+            <table id="product-list">
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Proveedor</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Televisión 4K</td>
+                        <td>Electrónica</td>
+                        <td>$500</td>
+                        <td>Proveedor A</td>
+                        <td>30</td>
+                        <td>Visible</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas de productos -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Generación de Reportes -->
+        <section class="report-generator">
+            <h2>Generar Reportes</h2>
+            <label for="report-type">Tipo de Reporte:</label>
+            <select id="report-type">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+            </select>
+            <label for="report-format">Formato:</label>
+            <select id="report-format">
+                <option value="pdf">PDF</option>
+                <option value="csv">CSV</option>
+            </select>
+            <button class="generate-report">Generar Reporte</button>
+        </section>
+    </div>
+</body>
+
+
+    
+
+</html>

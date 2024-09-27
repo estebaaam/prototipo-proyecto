@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.inventory-manager {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.actions {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.actions button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.actions button:hover {
+    background-color: #0b7dda;
+}
+
+.filters {
+    margin: 20px;
+    text-align: center;
+}
+
+.filters input,
+.filters select {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user-table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.user-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table table th, .user-table table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.user-table table th {
+    background-color: #f2f2f2;
+}
+
+.user-table table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #0b7dda;
+}
+
+.user-summary {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary-cards .card {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+.summary-cards .card h3 {
+    margin: 0 0 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.close-btn {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: darkred;
+}
