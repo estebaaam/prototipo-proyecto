@@ -1,8 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+const leerDatosUsuario = () => {
  
-  fetch('../json/datos-usuario.json')
+  fetch('https://api.jsonbin.io/v3/b/66fccee2ad19ca34f8b14f91')
       .then(response => response.json())
-      .then(user => {
+      .then(data => {
+
+        const user = data.record;
 
         document.getElementById('nombre').innerHTML = user.nombre;
         document.getElementById('telefono').innerHTML = user.telefono;
@@ -15,4 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
           console.error('Error al cargar los datos del JSON:', error);
         });
-});
+};

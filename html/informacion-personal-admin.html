@@ -18,35 +18,40 @@
   </header>
     <main>
         <section class="user-personal-info">
-            <h2>Tu Información Personal</h2>
+            <div class="user-personal-info-header">
+                <h2>Tu Información Personal</h2>
+                <button onclick="leerDatosAdmin()">Ver</button>
+                <button onclick="logout()">log out</button>
+            </div>
             <table id="table-admin">
                 <tr>
                     <th>Nombre Completo</th>
-                    <td id="nombre"></td>
+                    <td id="nombre">***********</td>
                 </tr>
                 <tr>
                     <th>Número de Teléfono</th>
-                    <td id="telefono"></td>
+                    <td id="telefono">***********</td>
                 </tr>
                 <tr>
                     <th>Correo Electrónico</th>
-                    <td id="correo"></td>
+                    <td id="correo">***********</td>
                 </tr>
                 <tr>
                     <th>Dirección</th>
-                    <td id="direccion"></td>
+                    <td id="direccion">***********</td>
                 </tr>
                 <tr>
                     <th>Identificación</th>
-                    <td id="identificacion"></td>
+                    <td id="identificacion">***********</td>
                 </tr>
                 <tr>
                     <th>Contraseña</th>
-                    <td id="password"></td>
+                    <td id="password">***********</td>
                 </tr>
             </table>
         </section>
     </main>
+    <script src="../js/validar-sesion.js"></script>
     <script src="../js/leer-admin.js"></script>
 </body>
 </html>

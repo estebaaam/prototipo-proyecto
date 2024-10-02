@@ -101,6 +101,32 @@ header {
   text-align: center;
 }
 
+.user-personal-info-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-personal-info-header button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  border-color: black;
+  transition: background-color 0.2s;
+}
+
+.user-personal-info-header button:hover {
+  background-color: white;
+  color: black;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

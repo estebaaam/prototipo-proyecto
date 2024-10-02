@@ -1,17 +1,23 @@
 
-  const validarUsuario = () =>{
+  const validarUsuario = (event) =>{
+
+    event.preventDefault();
  
       const email = document.getElementById('correo').value;
       const password = document.getElementById('password').value;
 
       
-      fetch('../json/usuarios.json')
+      fetch('https://api.jsonbin.io/v3/b/66fcc56ee41b4d34e43b8b3f')
           .then(response => response.json())
-          .then(users => {
-             
+          .then(data => {
+            
+            const users = data.record;
+
               const user = users.find(user => user.email === email && user.password === password);
 
               if (user) {
+
+                localStorage.setItem('isLoggedIn', 'true');
                   
                   if (user.tipo === 'admin') {
                       window.location.href = "../html/dashboard.html";
