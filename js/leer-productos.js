@@ -26,3 +26,25 @@ if(idProducto){
 } else {
 window.location.href = "tienda.html";
 }
+
+const addToCart = () => {
+  let cartState = document.getElementById('add-to-cart-btn').innerHTML;
+  let cartCounter = parseInt(localStorage.getItem('cartCounterStorage'));
+  if(cartCounter >= 0){
+    if(cartState === 'Añadir al Carrito'){
+      document.getElementById('add-to-cart-btn').innerHTML = 'Quitar del carrito';
+      cartCounter++;
+      localStorage.setItem('cartCounterStorage',cartCounter);
+      cartCounter = parseInt(localStorage.getItem('cartCounterStorage'));
+      document.getElementById('cart-counter').innerHTML = cartCounter;
+    }else{
+      document.getElementById('add-to-cart-btn').innerHTML = 'Añadir al Carrito';
+      cartCounter--;
+      localStorage.setItem('cartCounterStorage',cartCounter);
+      cartCounter = parseInt(localStorage.getItem('cartCounterStorage'));
+      document.getElementById('cart-counter').innerHTML = cartCounter;
+    }
+  }else {
+    alert('el carrito esta vacio')
+  }
+}

@@ -18,9 +18,12 @@
     </button>
     </div>
     <div class="righ-section">
-      <a href="carrito.html">
-        <button>Carrito de Compras</button>
-    </a>
+      <a class="cart-container">
+        <img class="img-cart" src="../img/icons/carrito-de-compras-removebg-preview.png">
+        <div id="cart-counter" class="cart-counter">
+            
+        </div>
+      </a>
     <a href="soporte.html">
       <button>Soporte Chatbot</button>
     </a>
@@ -52,9 +55,7 @@
                       <a href="pago.html">
                         <button class="buy-btn">Comprar</button>
                       </a>
-                      <a href="carrito.html">
-                        <button class="add-to-cart-btn">Añadir al Carrito</button>
-                      </a>
+                      <button id="add-to-cart-btn" onclick="addToCart()" class="add-to-cart-btn">Añadir al Carrito</button>
                   </div>
                 </div>
             </div>

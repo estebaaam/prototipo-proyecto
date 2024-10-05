@@ -7,24 +7,9 @@
     <link rel="stylesheet" href="../css/gestorPedido.css">
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <h1>TechShop</h1>
-        </div>
-        <div class="header-right">
-            <div class="user-info">
-                <img src="../img/icons/avatar.png" class="avatar">
-                <span class="user-role">Administrador</span>
-                <a href="#" class="logout">Cerrar Sesión</a>
-            </div>
-        </div>
-    </header>
-
     <main class="container">
         <header>
             <h1>Gestor de Pedidos</h1>
-            <input type="text" placeholder="Buscar pedido..." class="search-bar">
-            <button class="btn-create">Crear Nuevo Pedido</button>
         </header>
 
         <section class="order-review">
@@ -32,83 +17,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID de Pedido</th>
                         <th>Cliente</th>
-                        <th>Productos Comprados</th>
+                        <th>Producto Comprado</th>
                         <th>Precio Total</th>
-                        <th>Estado del Pedido</th>
-                        <th>Fecha de Creación</th>
-                        <th>Acciones</th>
+                        <th>Direccion</th>
+                        <th>Numero de telefono</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <select>
-                                <option value="pendiente">Pendiente</option>
-                                <option value="enviado">Enviado</option>
-                                <option value="entregado">Entregado</option>
-                                <option value="cancelado">Cancelado</option>
-                            </select>
-                        </td>
-                        <td></td>
-                        <td>
-                            <button class="btn-details">Ver Detalles</button>
-                            <button class="btn-edit">Editar</button>
-                            <button class="btn-cancel">Cancelar</button>
-                        </td>
+                        <td id="Cliente"></td>
+                        <td id="Producto Comprado"></td>
+                        <td id="Precio Total"></td>
+                        <td id="Direccion"></td>
+                        <td id="Numero de telefono"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Detalles del Pedido</h2>
-                <div class="client-info">
-                    <h3>Información del Cliente</h3>
-                    <p><strong>Nombre:</strong></p>
-                    <p><strong>Dirección de envío:</strong></p>
-                    <p><strong>Correo electrónico:</strong></p>
-                    <p><strong>Número de contacto:</strong></p>
-                </div>
-                <div class="product-details">
-                    <h3>Detalles de Productos</h3>
-                    
-                </div>
-                <div class="payment-info">
-                    <h3>Método de Pago</h3>
-                    <p>Tarjeta de Crédito - Estado:</p>
-                </div>
-                <div class="notes">
-                    <h3>Notas o Comentarios</h3>
-                    <p>No hay notas adicionales.</p>
-                </div>
-            </div>
-        </div>
-        <section class="report-generator">
-            <h2>Generar Reportes de Inventario</h2>
-            <button class="generate-report">Generar Reporte</button>
-            <div class="report-options">
-                <label for="report-type">Tipo de Reporte:</label>
-                <select id="report-type">
-                    <option value="diario">Diario</option>
-                    <option value="semanal">Semanal</option>
-                    <option value="mensual">Mensual</option>
-                </select>
-                <label for="format">Formato:</label>
-                <select id="format">
-                    <option value="pdf">PDF</option>
-                    <option value="csv">CSV</option>
-                </select>
-            </div>
-        </section>
     </main>
     <script src="../js/validar-sesion.js"></script>
+    <script src="../js/leer-pago.js"></script>
 </body>
 </html>

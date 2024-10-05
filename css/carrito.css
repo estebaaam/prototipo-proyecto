@@ -33,7 +33,7 @@ header {
   align-items: center;
 }
 
-.right-section button {
+.righ-section button {
   background-color: black;
   border-color: black;
   border: none;
@@ -41,8 +41,6 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 500;
-  margin-right: 16px;
-  margin-left: 3px;
   cursor: pointer;
 }
 
@@ -64,6 +62,8 @@ header {
   border-width: 1px;
   border-color: rgb(215, 213, 213);
   border-style: solid;
+  border-width: 1px;
+  margin-left: -1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,6 +82,32 @@ header {
   display: flex;
   align-items: center;
 }
+
+.img-cart {
+  width: 55px;
+  margin-right: 30px;
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-counter {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: -43px;
+  margin-left: 24px;
+}
+
+.righ-section {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .avatar {
   width: 40px;
