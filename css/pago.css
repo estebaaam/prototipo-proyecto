@@ -6,61 +6,105 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #fff;
+  color: #333;
 }
 
 header {
-  background-color: #000;
   padding: 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
 
-.left-section p {
-  color: white;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-}
-
-.right-section button {
-  background-color: black;
-  border-color: black;
+.righ-section button {
+  background-color: white;
   border: none;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin-right: 16px;
-  margin-left: 3px;
+  font-size: 17px;
+  font-weight: 600;
   cursor: pointer;
 }
+.left-section p {
+  font-size: 26px;
+  font-weight: 600;
+}
 
-.user-info {
+.middle-section {
+  margin-left: 70px;
+  margin-right: 35px;
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  flex: 1;
+  height: 40px;
+  padding-left: 10px;
+  border-color: rgb(215, 213, 213);
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.search-button {
+  height: 30px;
+  width: 66px;
+  background-color: white;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  margin-left: -70px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-search {
+  height: 25px;
+}
+
+.right-most-section {
   display: flex;
   align-items: center;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
+.log-sign-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.user-role {
-  margin-right: 20px;
-  font-weight: bold;
+.log-sign-buttons button {
+  background-color: white;
+  color: #333;
+  border: 2px solid white;
+  border-color: #333;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.log-sign-buttons button:hover {
+  background-color: #333;
   color: white;
+}
+
+.log-sign-buttons button:active {
+  opacity: 0.3;
 }
 
 .img-cart {
-  width: 55px;
+  width: 108px;
   margin-right: 30px;
 }
 
@@ -70,12 +114,12 @@ header {
 
 .cart-counter {
   position: absolute;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
   font-size: 17px;
   font-weight: 500;
-  margin-top: -43px;
-  margin-left: 24px;
+  margin-top: -47px;
+  margin-left: 51px;
+  font-weight: 700;
+  color: black;
 }
 
 .righ-section {
@@ -84,7 +128,15 @@ header {
   align-items: center;
 }
 
+.img-avatar {
+  width: 50px;
+}
 
+.user-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+}
 
 main {
   display: flex;
@@ -166,7 +218,5 @@ main {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #000;
-  color: #fff;
-  margin-top: 84px;
+  margin-top: 50px;
 }

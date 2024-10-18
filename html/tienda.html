@@ -18,10 +18,9 @@
       </button>
       </div>
       <div class="righ-section">
-        <a class="cart-container">
-            <img class="img-cart" src="../img/icons/carrito-de-compras-removebg-preview.png">
-            <div id="cart-counter" class="cart-counter">
-                
+        <a href="carrito.html" class="cart-container">
+            <img class="img-cart" src="../img/icons/carrito-removebg-preview.png">
+            <div id="cart-counter" class="cart-counter">           
             </div>
         </a>
         <a href="soporte.html">
@@ -29,72 +28,211 @@
         </a>
       </div>
       <div class="right-most-section">
-        <div class="user-info">
-            <a href="informacion-personal.html">
-                <img src="../img/icons/avatar.png"class="avatar">
-            </a>
-            <div class="user-role">gerson cruz</div>
+        <div class="log-sign-buttons">
+            <a href="log-in.html"><button>Login</button></a>
+            <a href="sign-in.html"><button>Sign In</button></a>
         </div>
     </div>
     </header>
 
+    <div class="container-promotional-banner">
+        <div class="banner-information">
+            <h1>Descubre lo último en tecnología.</h1>
+            <p>Explora nuestra selección de productos electrónicos de calidad, diseñados para mejorar tu vida diaria.</p>
+            <button>Conoce mas</button>
+        </div>
+        <img class="img-beginning-banner" src="../img/banners/img-beginning-banner.jpg">
+    </div>
+
+    <div class="center-container-carousel">
+        <div class="container-carousel">
+            <div class="carouseles">
+                <section class="slider-section">
+                    <div class="banner-information-carousel-1">
+                        <h1>Productividad sin límites!</h1>
+                        <p>Potencia y elegancia en cada tarea. Descubre lo mejor de Apple para trabajar, crear y disfrutar.</p>
+                        <button>Explorar</button>
+                    </div>
+                    <img src="../img/sliders/slider-1.jpg">
+                </section>
+                <section class="slider-section">
+                    <div class="banner-information-carousel-2">
+                        <h1>Innovación en la palma de tu mano</h1>
+                        <p>El Galaxy Note 20 te conecta con el futuro. Tecnología avanzada para lo que importa.</p>
+                        <button>Comprar Ahora</button>
+                    </div>
+                    <img src="../img/sliders/slider-2.jpg">
+                </section>
+                <section class="slider-section">
+                    <div class="banner-information-carousel-3">
+                        <h1>Versatilidad para todo lo que necesitas</h1>
+                        <p>Con un portátil HP, lleva tu creatividad y productividad al siguiente nivel, desde cualquier lugar.</p>
+                        <button>Explorar</button>
+                    </div>
+                    <img src="../img/sliders/slider-3.jpg">
+                </section>
+            </div>
+            <div onclick="moveToLeft()" class="btn-left"> < </div>
+            <div onclick="moveToRight()" class="btn-right"> > </div>
+        </div>
+    </div>
+
+    <div class="categories-container">
+        <div class="category-title">
+            <h3>Categorias Populares</h3>
+        </div>
+        <div class="container-categories-img">
+            <section class="container-category-img">
+                <p>Portatiles</p>
+                <img class="img-category" src="../img/banners/laptop-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Celulares</p>
+                <img class="img-category" src="../img/banners/phone-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Relojes</p>
+                <img class="img-category" src="../img/banners/clock-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Auriculares</p>
+                <img class="img-category" src="../img/banners/headphone-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Monitores</p>
+                <img class="img-category" src="../img/banners/monitor-section-img.jpg">
+            </section>
+        </div>
+    </div>
+
     <main>
+        <h1 class="best-of-today-title">Lo Mejor De Hoy!</h1>
         <section class="catalogo">
             <div class="product">
-                <a onclick="validarId(1)" href="producto.html">
-                    <div class="product-container"><img class="product-img" src="../img/img products/producto4.jpg"></div>
+                <a onclick="validarIdProducto(1)" href="producto.html">
+                    <div class="product-container"><img class="product-img" src="../img/img products/producto4.png"></div>
                 </a>
-                <h3>Pixel 8</h3>
-                <p>$499.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(1)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart1"></div>
+                </div>
             </div>
             <div class="product">
-                <a onclick="validarId(2)" href="producto.html">
+                <a onclick="validarIdProducto(2)" href="producto.html">
                     <div class="product-container"><img class="product-img" src="../img/img products/producto2.jpg"></div>
                 </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(2)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart2"></div>
+                </div>
+            </div>
+            <div class="product">
+            <a onclick="validarIdProducto(3)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto3.png"></div>
+            </a>
+            <div class="product-information">
                 <h3>Iphon 15</h3>
                 <p>$299.99</p>
             </div>
-            <div class="product">
-            <a onclick="validarId(3)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto3.jpg"></div>
-            </a>
-                <h3>Pixel 8 Pro</h3>
-                <p>$399.99</p>
+            <div class="add-to-cart-section">
+                <button onclick="addToCartFromStore(3)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                <div class="added-to-cart3"></div>
+            </div>
             </div>
             <div class="product">
-                <a onclick="validarId(4)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto1.jpg"></div>
+                <a onclick="validarIdProducto(4)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto1.png"></div>
                 </a>
-                <h3>Portatil Lenovo</h3>
-                <p>$249.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(4)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart4"></div>
+                </div>
             </div>
             <div class="product">
-                <a onclick="validarId(5)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto5.jpg"></div>
+                <a onclick="validarIdProducto(5)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto5.png"></div>
                 </a>
-                <h3>SKG smart</h3>
-                <p>$349.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(5)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart5"></div>
+                </div>
             </div>
             <div class="product">
-                <a onclick="validarId(6)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto6.jpg"></div>
+                <a onclick="validarIdProducto(6)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto6.png"></div>
                 </a>
-                <h3>Auriculares Gamer</h3>
-                <p>$449.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(6)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart6"></div>
+                </div>
             </div>
             <div class="product">
-                <a onclick="validarId(7)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto7.jpg"></div>
+                <a onclick="validarIdProducto(7)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto7.png"></div>
                 </a>
-                <h3>Monitor 4K</h3>
-                <p>$199.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(7)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart7"></div>
+                </div>
             </div>
             <div class="product">
-                <a onclick="validarId(8)" href="producto.html">
-                <div class="product-container"><img class="product-img" src="../img/img products/producto8.jpg"></div>
+                <a onclick="validarIdProducto(8)" href="producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto8.png"></div>
                 </a>
-                <h3>Portatil HP</h3>
-                <p>$199.99</p>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(8)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart8"></div>
+                </div>
+            </div>
+        </section>
+        <h1 class="choose-by-brand-title">Escoge Por Marca</h1>
+
+        <section class="brands-container">
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/logo-apple.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/samsung-logo.avif">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/HP-logo.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/Dell-Logo.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/sony-logo.webp">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/logo-lenovo.jpg">
             </div>
         </section>
     </main>
@@ -103,5 +241,7 @@
         <p>TechShop © 2024 - Todos los derechos reservados.</p>
     </footer>
 <script src="../js/validar-sesion.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/añadir-carrito.js"></script>
 </body>
 </html>
