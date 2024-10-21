@@ -50,18 +50,12 @@ async function signIn (event) {
                 },
                 body: JSON.stringify({ record: { usuario: usuarios } })
             });
-
-            const responseProductos = await fetch('https://api.jsonbin.io/v3/b/66ff0863ad19ca34f8b243e9');
-            const dataProductos = await responseProductos.json();
-            const productos = dataProductos.record.productos;
-
-            localStorage.setItem('productos',JSON.stringify(productos));
     
             if (!updateResponse.ok) {
                 throw new Error('Error al guardar el usuario');
             }
     
-            window.location.href = "index.html";      
+            window.location.href = "../html/tienda.html";      
         }
         
 
