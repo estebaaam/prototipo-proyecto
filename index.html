@@ -3,30 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TechShop - Home</title>
-    <link rel="stylesheet" href="css/home.css">
+    <title>Tienda - TechShop</title>
+    <link rel="stylesheet" href="css/tienda.css">
 </head>
 <body>
-    <header>      
-        <div class="logo">
-            <h1>TechShop</h1>
+    <header>
+      <div class="left-section">
+        <p>TechShop</p>
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+        <img class="icon-search" src="../img/icons/search.svg">
+      </button>
+      </div>
+      <div class="righ-section">
+        <a href="/html/carrito.html" class="cart-container">
+            <img class="img-cart" src="/img/icons/carrito-removebg-preview.png">
+            <div id="cart-counter" class="cart-counter">           
+            </div>
+        </a>
+        <a href="/html/soporte.html">
+            <button>Soporte Chatbot</button>
+        </a>
+      </div>
+      <div class="right-most-section">
+        <div class="log-sign-buttons">
+            <a href="/html/log-in.html"><button>Login</button></a>
+            <a href="/html/sign-in.html"><button>Sign In</button></a>
         </div>
-        <div class="buttons">
-            <a href="html/log-in.html"><button class="btn">Login</button></a>
-            <a href="html/sign-in.html"><button class="btn">Sign In</button></a>
-        </div>
+    </div>
     </header>
+    <div class="container-promotional-banner">
+        <div class="banner-information">
+            <h1>Descubre lo último en tecnología.</h1>
+            <p>Explora nuestra selección de productos electrónicos de calidad, diseñados para mejorar tu vida diaria.</p>
+            <button>Conoce mas</button>
+        </div>
+        <img class="img-beginning-banner" src="../img/banners/img-beginning-banner.jpg">
+    </div>
+
+    <div class="center-container-carousel">
+        <div class="container-carousel">
+            <div class="carouseles">
+                <section class="slider-section">
+                    <div class="banner-information-carousel-1">
+                        <h1>Productividad sin límites!</h1>
+                        <p>Potencia y elegancia en cada tarea. Descubre lo mejor de Apple para trabajar, crear y disfrutar.</p>
+                        <button>Explorar</button>
+                    </div>
+                    <img src="../img/sliders/slider-1.jpg">
+                </section>
+                <section class="slider-section">
+                    <div class="banner-information-carousel-2">
+                        <h1>Innovación en la palma de tu mano</h1>
+                        <p>El Galaxy Note 20 te conecta con el futuro. Tecnología avanzada para lo que importa.</p>
+                        <button>Comprar Ahora</button>
+                    </div>
+                    <img src="../img/sliders/slider-2.jpg">
+                </section>
+                <section class="slider-section">
+                    <div class="banner-information-carousel-3">
+                        <h1>Versatilidad para todo lo que necesitas</h1>
+                        <p>Con un portátil HP, lleva tu creatividad y productividad al siguiente nivel, desde cualquier lugar.</p>
+                        <button>Explorar</button>
+                    </div>
+                    <img src="../img/sliders/slider-3.jpg">
+                </section>
+            </div>
+            <div onclick="moveToLeft()" class="btn-left"> < </div>
+            <div onclick="moveToRight()" class="btn-right"> > </div>
+        </div>
+    </div>
+
+    <div class="categories-container">
+        <div class="category-title">
+            <h3>Categorias Populares</h3>
+        </div>
+        <div class="container-categories-img">
+            <section class="container-category-img">
+                <p>Portatiles</p>
+                <img class="img-category" src="../img/banners/laptop-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Celulares</p>
+                <img class="img-category" src="../img/banners/phone-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Relojes</p>
+                <img class="img-category" src="../img/banners/clock-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Auriculares</p>
+                <img class="img-category" src="../img/banners/headphone-section-img.jpg">
+            </section>
+            <section class="container-category-img">
+                <p>Monitores</p>
+                <img class="img-category" src="../img/banners/monitor-section-img.jpg">
+            </section>
+        </div>
+    </div>
 
     <main>
-        <div class="text">
-            <h2>Bienvenido a TechShop</h2>
-            <p>Somos una tienda de dispositivos tecnológicos con una amplia variedad de productos. Encuentra todo lo que necesitas para mantenerte al día con la tecnología.</p>
-            <a href="html/sobre-nosotros.html"><button>Learn More</button></a>
-        </div>
-        <div>
-            <img class="imagen-home" src="img/icons/imagen-home.jpg">
-        </div>  
+        <h1 class="best-of-today-title">Lo Mejor De Hoy!</h1>
+        <section class="catalogo">
+            <div class="product">
+                <a onclick="validarIdProducto(1)" href="/html/producto.html">
+                    <div class="product-container"><img class="product-img" src="../img/img products/producto4.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(1)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart1"></div>
+                </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(2)" href="/html/producto.html">
+                    <div class="product-container"><img class="product-img" src="../img/img products/producto2.jpg"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(2)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart2"></div>
+                </div>
+            </div>
+            <div class="product">
+            <a onclick="validarIdProducto(3)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto3.png"></div>
+            </a>
+            <div class="product-information">
+                <h3>Iphon 15</h3>
+                <p>$299.99</p>
+            </div>
+            <div class="add-to-cart-section">
+                <button onclick="addToCartFromStore(3)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                <div class="added-to-cart3"></div>
+            </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(4)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto1.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(4)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart4"></div>
+                </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(5)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto5.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(5)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart5"></div>
+                </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(6)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto6.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(6)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart6"></div>
+                </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(7)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto7.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(7)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart7"></div>
+                </div>
+            </div>
+            <div class="product">
+                <a onclick="validarIdProducto(8)" href="/html/producto.html">
+                <div class="product-container"><img class="product-img" src="../img/img products/producto8.png"></div>
+                </a>
+                <div class="product-information">
+                    <h3>Iphon 15</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="add-to-cart-section">
+                    <button onclick="addToCartFromStore(8)" class="add-to-cart-btn">Añadir Al Carrito</button>
+                    <div class="added-to-cart8"></div>
+                </div>
+            </div>
+        </section>
+        <h1 class="choose-by-brand-title">Escoge Por Marca</h1>
+
+        <section class="brands-container">
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/logo-apple.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/samsung-logo.avif">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/HP-logo.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/Dell-Logo.png">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/sony-logo.webp">
+            </div>
+            <div class="brand">
+                <img class="img-brand" src="../img/icons/logo-lenovo.jpg">
+            </div>
+        </section>
     </main>
+    
+    <footer>
+        <p>TechShop © 2024 - Todos los derechos reservados.</p>
+    </footer>
+<script src="js/validar-sesion.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/añadir-carrito.js"></script>
 </body>
 </html>

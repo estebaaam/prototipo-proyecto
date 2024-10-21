@@ -1,19 +1,11 @@
-async function hallarProductos() {
-  const listaIdproductos = JSON.parse(localStorage.getItem('listaIdProductos'));
-  try {
-    const response = await fetch('https://api.jsonbin.io/v3/b/66ff0863ad19ca34f8b243e9');
-    const data = await response.json();
-    const productos = data.record.productos;
-
+function filtrarProductos() {
+   const listaIdproductos = JSON.parse(localStorage.getItem('listaIdProductos'));
+   const productos = JSON.parse(localStorage.getItem('productos'));
     const productosFiltrados = productos.filter(producto => listaIdproductos.includes(producto.id));
-    
     return productosFiltrados;
-  } catch (error) {
-    console.error('Error al obtener los productos:', error);
-  }
 }
 
-async function mostrarCarrito() {
+function mostrarCarrito() {
 let cartCounter = parseInt(localStorage.getItem('cartCounter'));
 if(!cartCounter){
   document.querySelector('.cart-wrapper').innerHTML = `
@@ -29,7 +21,7 @@ if(!cartCounter){
   </div>
   `
 }else{
-  const productosFiltrados = await hallarProductos();
+  const productosFiltrados = filtrarProductos();
   let contadorProductos = JSON.parse(localStorage.getItem('contadorProductos'));
   const listaIdProductos = JSON.parse(localStorage.getItem('listaIdProductos'));
   let productosHTML = '';
